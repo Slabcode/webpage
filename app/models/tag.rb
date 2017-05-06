@@ -7,6 +7,28 @@ class Tag < ApplicationRecord
   validates :name,length: {minimum: 3}
   validates :description,length: {minimum: 10}
 
+  def self.load_tags(**args)
+    includes(:posts)
+      .paginate(:page => args[:page] || 1 , :per_page => args[:per_page] || 10)
+  end
+
+  def self.tag_by_id(id)
+    includes(:posts)
+      .find_by_id(id)
+  end
+
+  def self.tags_by_ids(ids,**args)
+    load_tags(**args)
+      .where(tags: {
+        id: ids
+        })
+  end
+
+  def self.tags_by_search(q,**args)
+    load_tags(**args)
+      .where(["lower(name) LIKE :name",{name: "%#{q.downcase}%"}])
+  end
+
   private
   def only_tag
     self.posts.each do |p|

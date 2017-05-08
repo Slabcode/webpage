@@ -10,16 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170506194944) do
+ActiveRecord::Schema.define(version: 20170508163005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.inet     "current_sign_in_ip"
+    t.inet     "last_sign_in_ip"
+    t.string   "name",                                null: false
+    t.string   "lastname",                            null: false
+    t.string   "username",                            null: false
+    t.integer  "failed_attempts",        default: 0,  null: false
+    t.string   "unlock_token"
+    t.datetime "locked_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.index ["email"], name: "index_admins_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true, using: :btree
+  end
 
   create_table "author_by_posts", force: :cascade do |t|
     t.integer  "author_id"
     t.integer  "post_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["author_id", "post_id"], name: "index_author_by_posts_on_author_id_and_post_id", unique: true, using: :btree
     t.index ["author_id"], name: "index_author_by_posts_on_author_id", using: :btree
     t.index ["post_id"], name: "index_author_by_posts_on_post_id", using: :btree
   end
@@ -48,6 +72,7 @@ ActiveRecord::Schema.define(version: 20170506194944) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["post_id"], name: "index_post_by_tags_on_post_id", using: :btree
+    t.index ["tag_id", "post_id"], name: "index_post_by_tags_on_tag_id_and_post_id", unique: true, using: :btree
     t.index ["tag_id"], name: "index_post_by_tags_on_tag_id", using: :btree
   end
 

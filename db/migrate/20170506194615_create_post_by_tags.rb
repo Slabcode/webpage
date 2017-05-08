@@ -6,5 +6,7 @@ class CreatePostByTags < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :post_by_tags, [:tag_id,:post_id], unique: true
   end
+
 end

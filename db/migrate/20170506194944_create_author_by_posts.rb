@@ -6,5 +6,6 @@ class CreateAuthorByPosts < ActiveRecord::Migration[5.0]
 
       t.timestamps
     end
+    add_index :author_by_posts, [:author_id,:post_id], unique: true
   end
 end

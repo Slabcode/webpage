@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :admins, path: ''
   #get 'statics/index'
   root to: "statics#index"
 

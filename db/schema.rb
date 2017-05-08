@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 20170506194944) do
   create_table "authors", force: :cascade do |t|
     t.string   "name",                    null: false
     t.string   "lastname",                null: false
+    t.text     "avatar",                  null: false
     t.string   "email",                   null: false
     t.string   "links",      default: [],              array: true
     t.datetime "created_at",              null: false

@@ -1,9 +1,10 @@
 class Author < ApplicationRecord
+  mount_uploader :avatar, AvatarUploader
   before_destroy :only_author
   default_scope {order("authors.name ASC").order("authors.lastname ASC")}
   has_many :author_by_posts, dependent: :destroy
   has_many :posts, through: :author_by_posts
-  validates_presence_of :name,:lastname,:email
+  validates_presence_of :name,:lastname,:email,:avatar
   validates :name,:lastname,length: {minimum: 3}
   validates_uniqueness_of :email, :case_sensitive => false
 

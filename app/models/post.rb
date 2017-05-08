@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  mount_uploader :image, AvatarUploader
   default_scope {order("posts.title ASC")}
   scope :order_by_created_at, -> (ord) {order("posts.created_at #{ord}")}
   has_many :comments, dependent: :destroy

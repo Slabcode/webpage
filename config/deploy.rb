@@ -39,6 +39,7 @@ set :branch,        "feature/deploy"
 set :format,        :pretty
 set :log_level,     :debug
 set :keep_releases, 5
+set :linked_dirs, %w{tmp/pids tmp/sockets log}
 
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}

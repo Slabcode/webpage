@@ -86,4 +86,4 @@ production:
   <<: *default
   database: slabcode_production
   username: slabcode
-  password: <%= ENV['SLABCODE_DATABASE_PASSWORD'] %>
+  password: 123456789

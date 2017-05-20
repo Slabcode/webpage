@@ -45,3 +45,8 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 
 # Allow puma to be restarted by `rails restart` command.
 plugin :tmp_restart
+pidfile '/home/user/slabcode/shared/tmp/pids/puma.pid'
+
+# Use "path" as the file to store the server info state. This is
+# used by "pumactl" to query and control the server.
+state_path '/home/user/slabcode/shared/tmp/pids/puma.state'

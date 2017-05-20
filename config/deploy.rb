@@ -31,7 +31,6 @@ set :ssh_options,     { forward_agent: true, user: fetch(:user), keys: %w(~/.ssh
 set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
-set :migration_role, :app
 
 ## Defaults:
 #set :scm,           :git
@@ -39,11 +38,10 @@ set :branch,        "feature/deploy"
 set :format,        :pretty
 set :log_level,     :debug
 set :keep_releases, 5
-set :linked_dirs, %w{tmp/pids tmp/sockets log}
 
 ## Linked Files & Directories (Default None):
 # set :linked_files, %w{config/database.yml}
-# set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 namespace :puma do
   desc 'Create Directories for Puma Pids and Socket'

@@ -8,7 +8,7 @@ server '178.62.46.234', port: 22, roles: [:web, :app, :db], primary: true
 set :repo_url, 'git@github.com:Slabcode/webpage.git'
 set :application,     'slabcode'
 set :user,            'deploy'
-set :puma_threads,    [16, 64]
+set :puma_threads,    [4, 16]
 set :puma_workers,    0
 set :bundle_without, nil            # this is default
 set :default_env, { rvm_bin_path: '~/.rvm/bin' }

@@ -1,0 +1,16 @@
+$white: #FFF;
+$black: #000;
+$green: #72d099;
+
+/* Fonts */
+$font-LatoB: 'Lato-Bold', times;
+$font-LatoH: 'Lato-Hairline', times;
+$font-LatoM: 'Lato-Medium', times;
+$font-LatoR: 'Lato-Regular', times;
+$font-LatoS: 'Lato-Semibold', times;
+$font-LatoT: 'Lato-Thin', times;
+$font-GothamB: 'GothamRounded-Bold', sans-serif;
+
+/* Fonts sizes */
+$font-size-base: 16px;
+$font-size-small:ceil(($font-size-base * 0.85)); // ~12px

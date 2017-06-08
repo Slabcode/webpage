@@ -6,7 +6,6 @@ git_source(:github) do |repo_name|
 end
 
 #Front Develop
-gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 

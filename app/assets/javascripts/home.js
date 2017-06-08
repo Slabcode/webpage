@@ -18,9 +18,7 @@ $(document).ready(function(){
 		var height = $(window).height();
 
 		var active_light = height - menu_height;
-		console.log("Height: " + height);
-		console.log("Menu: " + menu_height);
-		console.log(scroll);
+		
 		if (scroll == 0){
 			$('.wrapper-content .wrapper-menu').removeClass('menu-light menu-dark');
 		}

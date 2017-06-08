@@ -4,10 +4,13 @@
     <title>Slabcode</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= stylesheet_link_tag 'bootstrap.min', media: 'all' %>
+
   </head>
 
   <body>
     <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'bootstrap.min' %>
     <%= yield %>
   </body>
 </html>

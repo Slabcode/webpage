@@ -1,2 +1,101 @@
-<h1>Statics#index</h1>
-<p>Find me in app/views/statics/index.html.erb</p>
+<section class="wrapper-content">
+	<section class="wrapper-menu clearfix">
+		<div class="logo">
+			<a class="brand" href="#">
+				<h1 class="name">Slabcode</h1>
+			</a>
+		</div>
+		<div class="navbar-header">
+			<button class="navbar-toggle" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+		</div>
+		<div class="wrapper-menu">
+			<div class="navbar-collapse navbar-right collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="#">Servicios</a></li>
+					<li><a href="#">Nosotros</a></li>
+					<li><a href="#">Portafolio</a></li>
+					<li><a href="#">Blog</a></li>
+					<li><a href="#">Contacto</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<div class="bullets-menu">
+		<ul class="bullets">
+			<li><a href="#main-banner" class="selected"></a></li>
+			<li><a href="#services"></a></li>
+			<li><a href="#portfolio"></a></li>
+			<li><a href="#blog"></a></li>
+			<li><a href="#contact"></a></li>
+		</ul>
+	</div>
+	<section id="main-banner" class="section">
+		<div class="overlay"></div>
+		<div class="content">
+			<%= image_tag "slabcode-logo.png", :class => "logo" %>
+			<h2 class="slogan">hjset magnis dis parturient mon</h2>
+			<a href="#" class="contact-button"><i class="fa fa-envelope-open-o" aria-hidden="true"></i>Lorem Ipsum Dolor</a>
+		</div>
+	</section>
+	<section id="services" class="section">
+		<h2 class="section-name">Our Services!</h2>
+		<div class="services-content">
+			<div class="service row">
+				<div class="service-image col-md-6">
+					<%= image_tag "ux-mobile.jpg", :class => "img-responsive" %>
+				</div>
+				<div class="service-detail col-md-6">
+					<h3 class="service-name">Service 1</h3>
+					<p class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non eveniet, sint ratione voluptatum quae consectetur sapiente necessitatibus nesciunt. Laudantium dolor libero, voluptatibus sapiente eum. Sapiente obcaecati quod iure, omnis! Quidem.
+
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta adipisci pariatur autem eius temporibus qui quidem harum? At fugiat, commodi! Sequi hic blanditiis fugiat autem vitae, officia quo repudiandae, laboriosam.
+					</p>
+				</div>
+			</div>
+			<div class="service row">
+				<div class="service-image col-md-6">
+					<%= image_tag "analytics.jpg", :class => "img-responsive" %>
+				</div>
+				<div class="service-detail col-md-6">
+					<h3 class="service-name">Service 2</h3>
+					<p class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non eveniet, sint ratione voluptatum quae consectetur sapiente necessitatibus nesciunt. Laudantium dolor libero, voluptatibus sapiente eum. Sapiente obcaecati quod iure, omnis! Quidem.
+
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta adipisci pariatur autem eius temporibus qui quidem harum? At fugiat, commodi! Sequi hic blanditiis fugiat autem vitae, officia quo repudiandae, laboriosam.
+					</p>
+				</div>
+			</div>
+			<div class="service row">
+				<div class="service-image col-md-6">
+					<%= image_tag "mobile-devices.jpg", :class => "img-responsive" %>
+				</div>
+				<div class="service-detail col-md-6">
+					<h3 class="service-name">Service 3</h3>
+					<p class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non eveniet, sint ratione voluptatum quae consectetur sapiente necessitatibus nesciunt. Laudantium dolor libero, voluptatibus sapiente eum. Sapiente obcaecati quod iure, omnis! Quidem.
+
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta adipisci pariatur autem eius temporibus qui quidem harum? At fugiat, commodi! Sequi hic blanditiis fugiat autem vitae, officia quo repudiandae, laboriosam.
+					</p>
+				</div>
+			</div>
+			<div class="service row">
+				<div class="service-image col-md-6">
+					<%= image_tag "design-work.jpg", :class => "img-responsive" %>
+				</div>
+				<div class="service-detail col-md-6">
+					<h3 class="service-name">Service 4</h3>
+					<p class="service-description">
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non eveniet, sint ratione voluptatum quae consectetur sapiente necessitatibus nesciunt. Laudantium dolor libero, voluptatibus sapiente eum. Sapiente obcaecati quod iure, omnis! Quidem.
+
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta adipisci pariatur autem eius temporibus qui quidem harum? At fugiat, commodi! Sequi hic blanditiis fugiat autem vitae, officia quo repudiandae, laboriosam.
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>

@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "slick";
 @import "mixin";
 @import "fonts";
 @import "variables";
@@ -18,16 +19,13 @@ body{
 .wrapper-content{
 	position: relative;
 	.wrapper-menu{
-		background: rgba(0,0,0,0.6);
-		background: -webkit-linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0) );
-		background: -o-linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0) );
-		background: -moz-linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0) );
-		background: linear-gradient( rgba(0,0,0,0.6), rgba(0,0,0,0) );
+		background: transparent;
 		left: 0;
 		padding: 0 25px;
-		position: absolute;
+		position: fixed;
 		top: 0;
 		width: 100%;
+		z-index: 999;
 		.logo{
 			display: inline-block;
 			position: relative;
@@ -116,15 +114,17 @@ body{
 			}
 		}
 	}
+	.section{
+		display: block;
+		height: 100vh;
+		padding: 70px;
+		position: relative;	
+	}
 	#main-banner{
 		background-image: url('main-image.jpg');
 		background-position: 50% 30%;
 		background-repeat: no-repeat;
 		background-size: cover;
-		display: block;
-		height: 100vh;
-		padding: 40px;
-		position: relative;	
 		text-align: center;
 		.overlay{
 			background: rgba(255,255,255,0.3);
@@ -161,7 +161,7 @@ body{
 				font-size: 19px;
 				margin-top: 10px;
 				max-height: 65px;
-				padding: 20px 35px;
+				padding: 16px 30px;
 				position: relative;
 				z-index: 1;
 				@include transition(0.3s ease-in-out);
@@ -208,6 +208,53 @@ body{
 						opacity: 0;
 						-webkit-transform: scale3d(0.85, 0.85, 1);
 						transform: scale3d(0.85, 0.85, 1);
+					}
+				}
+			}
+		}
+	}
+	#services{
+		background-color: #333;
+		color: #fff;
+		padding: 100px 150px;
+		.section-name{
+			margin-bottom: 40px;
+		}
+		.services-content{
+			.slick-arrow{
+				background-color: transparent;
+				border: none;
+				position: absolute;
+				top: 40%;
+				z-index: 10;
+				i{
+					color: #fff;
+					font-size: 60px;
+				}
+			}
+			.slick-prev{
+				left: -70px;
+			}
+			.slick-next{
+				right: 0;
+			}
+			.service{
+				margin: 0;
+				.service-image{
+					padding: 0 20px 0 0;
+					img{
+						max-height: 350px;
+					}
+				}
+				.service-detail{
+					padding: 0 65px;
+					.service-name{
+						font-size: 23px;
+						margin: 0 0 30px;
+					}
+					.service-description{
+						font-size: 17px;
+						padding-right: 15px;
 					}
 				}
 			}
